@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArsClick для Telegram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="coin-count">
+                <img src="coin.png" alt="Coin" class="coin-icon">
+                <span id="counter">0</span>
+            </div>
+            <div class="level">
+                <img src="trophy.png" alt="Trophy" class="trophy-icon">
+                <span>Legendary</span>
+            </div>
+        </div>
+        <div class="coin" onclick="incrementCounter()">
+            <img src="click-icon-transparent.png" alt="Click Icon" class="click-icon">
+        </div>
+        <div class="energy-bar">
+            <div class="energy" id="energy"></div>
+            <span id="energy-text">6500/6500</span>
+        </div>
+        <div class="upgrades">
+            <button class="upgrade-btn" onclick="buyUpgrade('doubleClick')">Удвоение клика (Цена: <span id="doubleClickCost">10</span> монет)</button>
+            <button class="upgrade-btn" onclick="buyUpgrade('autoClicker')">Автокликер</button>
+        </div>
+        <div class="footer">
+            <button class="footer-btn">Ref</button>
+            <button class="footer-btn">Task</button>
+            <button class="footer-btn">Tap</button>
+            <button class="footer-btn">Boost</button>
+            <button class="footer-btn">Stats</button>
+        </div>
+    </div>
+
+    <!-- Кнопка для запуска музыки -->
+    <button onclick="playMusic()">Врубити музло</button>
+
+    <!-- Аудио элемент -->
+    <audio id="backgroundMusic">
+        <source src="background-music.mp3" type="audio/mpeg">
+        <source src="background-music.ogg" type="audio/ogg">
+        <source src="background-music.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Ваш JavaScript код для управления музыкой -->
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("backgroundMusic");
+            audio.play();
+        }
+    </script>
+</body>
+</html>

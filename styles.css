@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.coin-count {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.coin-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.level {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+.trophy-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.coin {
+    cursor: pointer;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.click-icon {
+    width: 150px;
+    height: 150px;
+    transition: transform 0.1s;
+}
+
+.coin:active .click-icon {
+    transform: scale(1.2);
+}
+
+.energy-bar {
+    position: relative;
+    background: #ff6f61;
+    border-radius: 10px;
+    margin: 20px 0;
+    height: 20px;
+    overflow: hidden;
+}
+
+.energy {
+    background: #ff9a9e;
+    width: 100%;
+    height: 100%;
+    transition: width 0.3s;
+}
+
+.energy-bar span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.upgrade-btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    margin: 10px 0;
+    font-size: 18px;
+    color: white;
+    background: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.upgrade-btn:hover {
+    background: #ff4b3e;
+}
+
+.upgrade-btn:active {
+    transform: scale(0.95);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.footer-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.footer-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.footer-btn:active {
+    transform: scale(0.95);
+}
